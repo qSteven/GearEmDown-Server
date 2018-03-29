@@ -32,4 +32,4 @@ You can find an already compiled Linux version here: http://qwellcode.com/github
 This unity project was developed by interns as a game development project for education purposes. All the 3D models, shader and a rudimentary UI is implemented in this project for testing and later use. If you plan on hosting a server, make sure to build a "headless" version and run it with `-batchmode -nographics` in the commandline.
 
 ## License
-This project is licensed under the MIT License - see the \[LICENSE\](https://github.com/qSteven/GearEmDown-Server/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
