@@ -8,7 +8,7 @@ The entire game logic runs here. Every client is only running a visual represent
 - Unity 2017.3.1f1
 
 ## Clients
-You can find the A-Frame version of the client here: [Link zum Repo wenn es öffentlich ist]
+You can find the A-Frame version of the client [here](https://github.com/qSteven/GearEmDown-Client).
 A Decentraland version is planed but not determent.
 
 ## Building a server version
