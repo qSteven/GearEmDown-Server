@@ -24,9 +24,15 @@ Example (Linux):
 ```
 ./GearEmDown_Server.x86_64 -batchmode -nographics -port 8080
 ```
+Example (Windows):
+```
+GearEmDown_Server.exe -batchmode -nographics -port 8080
+```
 
 ### Download
-You can find an already compiled Linux version here: http://qwellcode.com/github/GearEmDown_Server_v1.0.zip
+You can find already compiled versions here:
+- [Linux v1.0](http://qwellcode.com/github/GearEmDown_Server_Linux_v1.0.zip)
+- [Windows v1.0](http://qwellcode.com/github/GearEmDown_Server_Windows_v1.0.zip)
 
 ## Additional Notes
 This unity project was developed by interns as a game development project for education purposes. All the 3D models, shader and a rudimentary UI is implemented in this project for testing and later use. If you plan on hosting a server, make sure to build a "headless" version and run it with `-batchmode -nographics` in the commandline.
