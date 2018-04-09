@@ -9,7 +9,7 @@ The entire game logic runs here. Every client is only running a visual represent
 
 ## Clients
 You can find the A-Frame version of the client [here](https://github.com/qSteven/GearEmDown-Client).
-A Decentraland version is planed but not determent.
+A Decentraland version is planned but not determined.
 
 ## Building a server version
 ### Build
