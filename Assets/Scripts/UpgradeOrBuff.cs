@@ -51,8 +51,6 @@ public class UpgradeOrBuff : MonoBehaviour {
 
 	//Removing a buff, when the buff tower was sold. Goes only for buffs, you can't remove upgrades.
 	//But if you want to: You need another array like the buffAmount array which saves the upgrade amounts.
-	//I'm too lazy for that and moreover: WHY REMOVING UPGRADES ANYWAY?
-	//Sry I'm a bit paranoid, I'm afraid of Steven, he always wants me to program more and more...
 	public static void RemoveBuff(int propID, int type) {
 		for (int i = 0; i < BuildingManager.towersInScene.Count; i++) {
 			if (BuildingManager.towersInScene [i] != null) {

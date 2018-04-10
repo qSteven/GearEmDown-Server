@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerSplashScript : MonoBehaviour {
-
+public class TowerSplashScript : MonoBehaviour
+{
 	/// <summary>
-	/// MS: V.10.0 This tower attacks an area around the first enemy which entered the tower's collider until it leaves it.
+	/// MS: V.10.0 This tower attacks an area around the first enemy, which entered the tower's collider until it leaves it.
 	/// Every enemy which enters the tower's collider will be added to a list and TakeDamage(dmg) will be called on the enemies, which are near the first enemy in the list.
 	/// </summary>
 

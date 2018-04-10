@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePlay : MonoBehaviour {
-
+public class GamePlay : MonoBehaviour
+{
 	//status -2 = game resets
 	//status -1 = no wave (before pressing "start game")
 	//status 0 = after pressing "start game" and after game was lost or entered. endless "wave" without enemies

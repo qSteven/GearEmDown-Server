@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TowerSlowScript : MonoBehaviour {
-
+public class TowerSlowScript : MonoBehaviour
+{
 	/// <summary>
 	/// MS: V.10.0 This tower is slowing enemies which are in its range.
 	/// Enemies which enter the tower's collider will be added to the list below.
-	/// 
 	/// Slow multiplier can't stack on enemies!
 	/// Only the multiplier of the tower which an enemy entered first will apply.
 	/// </summary>
 	private List<GameObject> enemyList = new List<GameObject>();
 
-	//Checks every update if an enemy which isn't slow already is in range.
+	//Checks every update if an enemy, which isn't slow already, is in range.
 	//This happens, when an enemy leaves another slow tower's collider and is already in a next collider. (Game won't notice because only OnTriggerEnter and OnTriggerExit are used)
 	void Update(){
 		foreach (GameObject enemy in enemyList) {

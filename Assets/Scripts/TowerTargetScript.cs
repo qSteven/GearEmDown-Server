@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerTargetScript : MonoBehaviour {
-
+public class TowerTargetScript : MonoBehaviour
+{
 	/// <summary>
 	/// MS: V.10.0 This tower attacks the first enemy which entered the tower's collider until it leaves it.
 	/// Every enemy which enters the tower's collider will be added to a list (enemyPriority) and TakeDamage(dmg) will be called on the first enemy in this list.
@@ -62,7 +62,7 @@ public class TowerTargetScript : MonoBehaviour {
 			if (enemy.GetComponent<EnemyScript>() != null) {
 			enemy.GetComponent<EnemyScript> ().TakeDamage (gameObject.GetComponent<Building>().damage);
 			Connection.SendToAll ("6|2;" + gameObject.GetComponent<Building>().id + ";" + enemy.GetComponent<EnemyScript>().id + ";" + (enemy.GetComponent<EnemyScript>().lifePoints - gameObject.GetComponent<Building> ().damage));
-			Debug.Log ("6|2;" + gameObject.GetComponent<Building>().id + ";" + enemy.GetComponent<EnemyScript>().id + ";" + (enemy.GetComponent<EnemyScript>().lifePoints - gameObject.GetComponent<Building> ().damage));
+			//Debug.Log ("6|2;" + gameObject.GetComponent<Building>().id + ";" + enemy.GetComponent<EnemyScript>().id + ";" + (enemy.GetComponent<EnemyScript>().lifePoints - gameObject.GetComponent<Building> ().damage));
 
 				if(enemy.GetComponent<EnemyScript>() != null) {
 				if(gameObject.GetComponent<Building>().fireRate > 0.1f)

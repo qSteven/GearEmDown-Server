@@ -50,12 +50,9 @@ public class EnemyScript : MonoBehaviour
 
 		Connection.SendToAll ("6|1;" + prefabID + ";" + id);
 
-		//Yo dude
-		//NavMesh is pretty shitty because you can't let an agent fly above other agents lmao
-		//So I created another NavMesh for the flying enemies.
-		//But it's buggy because the flying enemies had problems with its destination.
-		//And i couldn't change the tag of the enemies because it's "Enemy" everywhere and I already use this.
-		//So I used this cheesy solution, lol, don't laugh, it's working:
+		//The "baseOffset" is used to distinguish flying enemies from ground enemies.
+		//I couldn't change the tag of the enemies because it's "Enemy" everywhere and I already use this.
+		//TODO: Find a better solution.
 		if(gameObject.GetComponent<NavMeshAgent>().baseOffset == 0.2f)
 			agent.SetDestination (new Vector3(basePosition.x, basePosition.y+1, basePosition.z));
 		else
@@ -69,7 +66,7 @@ public class EnemyScript : MonoBehaviour
 
 	//Called by towers, when they attack an enemy.
 	//If enemy reaches 0 lifePoints, reward will be added to player money and the kill counter increases.
-	//Of course gameObject is getting destroyed too, lol.
+	//Of course the gameObject will be destroyed too.
 	public void TakeDamage(float damage){
 		if (GamePlay.gameActive) {
 			if (gameObject != null) {

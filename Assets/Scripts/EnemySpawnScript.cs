@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnScript : MonoBehaviour {
+public class EnemySpawnScript : MonoBehaviour
+{
 	public static EnemySpawnScript instance;
 
 	//e = nArrow
@@ -84,7 +85,7 @@ public class EnemySpawnScript : MonoBehaviour {
 		Group g = round.NextGroup ();
 
 		if (g != null) {
-			Debug.Log ("Group: " + g.enemyAmount + "----------" + g.enemyAmount2 + "----------" + g.enemyAmount3);
+			//Debug.Log ("Group: " + g.enemyAmount + "----------" + g.enemyAmount2 + "----------" + g.enemyAmount3);
 			for (int i = 0; i < g.enemyAmount; i++) {
 				GameObject enemy1 = Instantiate (e, spawnPosition, Quaternion.identity) as GameObject;
 				enemy1.transform.rotation = Quaternion.Euler (0, 180, 0);

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Wave
 {
 	/// <summary>
-	/// MS: V.10.0 This script is pretty cool, probably the best of what an useless and stupid trainee managed to build. :D
-	/// 
+	/// MS: V.10.0
 	/// You give a maximum number of enemies for one wave to this constructor and it splits the number in groups, which have a random size.
 	/// It also calculates how many enemies of which kind are in these groups.
 	/// There are 40% normal, 30% tank and 30% air enemies of the maximum enemy amount in one wave and these will be added randomly to those groups.

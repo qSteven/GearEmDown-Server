@@ -111,7 +111,6 @@ public class BuildingManager : MonoBehaviour
 			}
 		}
 		//If a buff tower was sold, every other buff tower should update his list in case they are able buff a tower which was buffed by the sold buff tower.
-		//It's not as confusing as it sounds m8, my english is just bad.
 		for (int i = 0; i < towersInScene.Count; i++) {
 			if (towersInScene [i] != null) {
 				if (towersInScene [i].CompareTag ("TowerBuff")) {

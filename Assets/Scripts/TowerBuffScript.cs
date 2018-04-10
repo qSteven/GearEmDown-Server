@@ -2,45 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerBuffScript : MonoBehaviour {
-
+public class TowerBuffScript : MonoBehaviour
+{
 	/// <summary>
-	/// 
-	/// Dear sad person, who ended up reading this comment.
-	/// 
-	/// I don't know why you're here, but you must be really despaired (or maybe you're just curious what I did here lol).
-	/// In case you want to understand or edit this code: DON'T DO IT.
-	/// This code is absolutely unstable and a little edit causes the system to get reeeeaaaally buggy.
-	/// I'm really sorry for this, lol
-	/// Right at the moment, it's working. I really don't know how I managed to build a working(?) buffing system, BUT I WORKED HARD FOR THIS.
-	/// I'm sure that there still may be some bugs, if you try hard enough to find them.
-	/// 
-	/// But please do yourself a favor:
-	/// If you want to edit this - either THROW THE WHOLE CODE AWAY or call me, lmao.
-	/// 
-	/// Yours faithfully
-	/// An unimportant, stupid trainee
-	/// 
+	/// MS: V.10.0
+	/// Mechanics of the buff tower:
+	///
+	/// When you place this tower it's doing nothing at first.
+	/// It has to be initialised with a type first.
+	/// The type says, which stat of other towers the buff tower is increasing.
+	/// One buff tower can only have one type and can not be changed anymore.
+	/// When you initialise a buff tower with a type, it will automatically upgrade himself to level 1 (which costs money).
+	/// You can upgrade the buff tower to level 2, so it buffes more.
+	///
+	/// If another tower was added to the buff tower's range while the buff tower was already been initialised, the new tower is getting buffed automatically.
+	/// The buff tower connects with one tower, as long as they both exist.
+	/// When one of them is being sold, like for example the buff tower, the normal tower automatically connects with another buff tower, if he is in range.
 	/// </summary>
 
-	//MS: V.10.0
-	//
-	//Mechanics of the buff tower:
-	//
-	//When you place this tower he is doing nothing at first.
-	//It has to be initialised with a type first.
-	//The type says, which stat of other towers the buff tower is increasing.
-	//One buff tower can only have one type and can not be changed anymore.
-	//When you initialise a buff tower with a type, he will be automatically upgrade himself to level 1 (which costs money).
-	//You can upgrade the buff tower to level 2, so he buffes more.
-	//
-	//
-	//If another tower was added to the buff tower's range while the buff tower was already been initialised, the new tower is getting buffed automatically.
-	//The buff tower connects with one tower, as long as they both exist.
-	//When one of them is being sold, like for example the buff tower, the normal tower automatically connects with another buff tower, if he is in range.
-	//THAT'S A PRETTY DAMN COOL SYSTEM, I KNOW
-
-	//chosen says if a buff tower has already been initialised with a type.
+	//Says if a buff tower has already been initialised with a type.
 	public bool chosen = false;
 
 	//Will be set true everytime a buff tower buffes another tower (again).
@@ -66,14 +46,6 @@ public class TowerBuffScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		//Yeah, it's an UGLY and SLOW copy paste code
-		//I DON'T CARE ABOUT PERFORMAAAANNNNCCCCEEEEEEEE
-		//AT LEAST IT WORKS, OKAY?
-		//Sorry, but I don't have energy left for ripping my fragile buff system apart just to put it together again.
-		//I'm losing more of my mental health everyday
-		//I'm at the border of becoming INSANE
-		//So please understand.
-
 		if (buffTower) {
 			buffTower = false;
 			BuffTower ();

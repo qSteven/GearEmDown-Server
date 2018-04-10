@@ -5,13 +5,6 @@ using System;
 
 public class Building : MonoBehaviour
 {
-	/// <summary>
-	/// "OH GOD WHAT A CHAOS"
-	/// Yeah, I know
-	/// I was too lazy to separate the data for every tower kind.
-	/// Now even the buff tower has damage but whatever, it still works when you ignore unimportant stats ¯\_(ツ)_/¯
-	/// </summary>
-
 	//Saves how much will be added with every upgrade / buff level.
 	//Goes for upgrading AND buffing, both methods use the same stats!
 	public int[] damageLevel;
@@ -67,9 +60,6 @@ public class Building : MonoBehaviour
 
 	//Stuff for the algorithm of the buff tower
 	public bool inBuffRange = false;
-	//I am insane creating so many arrays.
-	//Tbh I don't even know if an array is necessary, I think not,
-	//but I don't want to change this because testing is frustrating and this system is unstable enough for that.
 	//public bool dontBuffAgain = true;
 	public bool[] dontBuffAgain = new bool[3];
 

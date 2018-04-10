@@ -5,10 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour {
 
 	/// <summary>
-	/// "Oh, an ugly script again!"
-	/// Yeah, sorry
-	/// But don't worry, you don't need this ugly, shitty script.
-	/// It's only for the Unity GUI for testing stuff.
+	/// This script is only for the Unity GUI and testing stuff.
 	/// Just checks if player presses for example "sell" and then presses on a tower and so on.
 	/// You can also upgrade towers or initialise a buff tower.
 	/// </summary>

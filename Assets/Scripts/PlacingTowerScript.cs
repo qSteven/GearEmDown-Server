@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacingTowerScript : MonoBehaviour {
-
+public class PlacingTowerScript : MonoBehaviour
+{
 	/// <summary>
 	/// Handles the raycast for placing towers. (That floating red placeholder tower)
 	/// It also checks when player presses right click (cancel tower placement) or left click (BuildingManager.Placebuilding will be called).
 	/// </summary>
 
-	//Raycast stuff
+	//Raycast
 	private Vector3 pos;
 	private Ray ray;
 	public static RaycastHit hit;
 	private bool cast = false;
 	private Transform trans;
 
-	//More raycast stuff
 	void FixedUpdate () {
 		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		cast = Physics.Raycast (ray, out hit);
@@ -43,6 +42,4 @@ public class PlacingTowerScript : MonoBehaviour {
 		}
 		gameObject.transform.position = pos;
 	}
-
-
 }

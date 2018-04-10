@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonScript : MonoBehaviour {
-
-	/// <summary>
-	/// "OH GOD!!!"
-	/// Yeah
-	/// So much unnecessary stuff
-	/// It's only for my GUI so you can ignore this shit.
-	/// But better don't delete this script, it has too many references to other scripts, because otherwise I wouldn't be able to test this game.
-	/// </summary>
-
+public class ButtonScript : MonoBehaviour
+{
 	public GameObject tower1Button;
 	public GameObject tower2Button;
 	public GameObject tower3Button;
@@ -25,11 +17,9 @@ public class ButtonScript : MonoBehaviour {
 	public GameObject towerBuff;
 	public GameObject towerTarget2;
 
-	//THIS LIST IS NEEDED IN ANOTHER SCRIPT AT THE MOMENT, SORRY, TOO LAZY TO CHANGE THIS
-	//DO NOT DELETE
-	public static List<GameObject> towers;
-	//DO NOT DELETE
-	public List<GameObject> types;
+	//THIS LIST IS NEEDED IN ANOTHER SCRIPT AT THE MOMENT
+	public static List<GameObject> towers; //DO NOT DELETE
+	public List<GameObject> types; //DO NOT DELETE
 
 	public GameObject openManagerButton;
 	public static GameObject upgradeButtonStatic;

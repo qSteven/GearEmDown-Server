@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class GameStatsScript : MonoBehaviour {
 
 	/// <summary>
-	/// This script only displays the current stats like base health, money, kills and game status in the Unity GUI.
-	/// Can be ignored.
+	/// This script displays the current stats like base health, money, kills and game status.
 	/// </summary>
 
 	public static Text stats;
