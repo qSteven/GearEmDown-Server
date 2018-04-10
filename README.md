@@ -8,8 +8,8 @@ The entire game logic runs here. Every client is only running a visual represent
 - Unity 2017.3.1f1
 
 ## Clients
-You can find the A-Frame version of the client here: [Link zum Repo wenn es öffentlich ist]
-A Decentraland version is planed but not determent.
+You can find the A-Frame version of the client [here](https://github.com/qSteven/GearEmDown-Client).
+A Decentraland version is planned but not determined.
 
 ## Building a server version
 ### Build
@@ -24,12 +24,18 @@ Example (Linux):
 ```
 ./GearEmDown_Server.x86_64 -batchmode -nographics -port 8080
 ```
+Example (Windows):
+```
+GearEmDown_Server.exe -batchmode -nographics -port 8080
+```
 
 ### Download
-You can find an already compiled Linux version here: http://qwellcode.com/github/GearEmDown_Server_v1.0.zip
+You can find already compiled versions here:
+- [Linux v1.0](http://qwellcode.com/github/GearEmDown_Server_Linux_v1.0.zip)
+- [Windows v1.0](http://qwellcode.com/github/GearEmDown_Server_Windows_v1.0.zip)
 
 ## Additional Notes
 This unity project was developed by interns as a game development project for education purposes. All the 3D models, shader and a rudimentary UI is implemented in this project for testing and later use. If you plan on hosting a server, make sure to build a "headless" version and run it with `-batchmode -nographics` in the commandline.
 
 ## License
-This project is licensed under the MIT License - see the \[LICENSE.md\](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
