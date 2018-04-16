@@ -19,7 +19,7 @@ A Decentraland version is planned but not determined.
 4. Move the executable, "_Data" folder and any additional files (if any) to your desired directory on your server.
 5. Navigate inside the directory with your command line editor.
 6. Run the executable with the following parameters `-batchmode -nographics -port 8080`. You can replace `8080` with another port if you need.
-
+### Execute
 Example (Linux):
 ```
 ./GearEmDown_Server.x86_64 -batchmode -nographics -port 8080
@@ -28,14 +28,23 @@ Example (Windows):
 ```
 GearEmDown_Server.exe -batchmode -nographics -port 8080
 ```
-
 ### Download
 You can find already compiled versions here:
-- [Linux v1.0](http://qwellcode.com/github/GearEmDown_Server_Linux_v1.0.zip)
-- [Windows v1.0](http://qwellcode.com/github/GearEmDown_Server_Windows_v1.0.zip)
+- [Linux v1.1](http://qwellcode.com/github/GearEmDown_Server_Linux_v1.1.zip)
+- [Windows v1.1](http://qwellcode.com/github/GearEmDown_Server_Windows_v1.1.zip)
+
+Unity **does not** have to be installed in order to run a compiled version.
 
 ## Additional Notes
 This unity project was developed by interns as a game development project for education purposes. All the 3D models, shader and a rudimentary UI is implemented in this project for testing and later use. If you plan on hosting a server, make sure to build a "headless" version and run it with `-batchmode -nographics` in the commandline.
+
+## Troubleshooting
+If you are not able to place towers after you started a round, try using the `-decimal_sep` option. If you, for example, host your game server on a german machine, the decimal separator might have to be set to `,` instead of `.` (which is the default value).
+
+Example (Linux):
+```
+./GearEmDown_Server.x86_64 -batchmode -nographics -port 8080 -decimal_sep ,
+```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -18,6 +18,7 @@ public enum ProtocolDef
 public class ProtocolHandler : MonoBehaviour
 {
 	public static ProtocolHandler instance;
+	public static char decimal_seperator = '.';
 
 	void Awake()
 	{
@@ -56,19 +57,11 @@ public class ProtocolHandler : MonoBehaviour
 			break;
 
 		case ProtocolDef.PlaceTower:
-			string[] data = msg.Split(new char[]{ ';' });
+			string[] data = msg.Split (new char[]{ ';' });
 
-			// Nur für Linux Build!
-			#if !UNITY_EDITOR
-			data[1] = data[1].Replace('.', ',');
-			data[2] = data[2].Replace('.', ',');
-			#endif
+			float posX = ParseNetworkFloat(data[1]);
+			float posZ = ParseNetworkFloat(data[2]);
 
-			float posX, posZ;
-			if (!float.TryParse(data[1], out posX) || !float.TryParse(data[2], out posZ))
-			{
-				throw new UnityException("Error while parsing Float. X: " + data[1] + "; Y: " + data[2]);
-			}
 			int clientMsg = BuildingManager.PlaceBuilding(int.Parse(data[0]), new Vector3(posX, 0f, posZ));
 			if (clientMsg != 1)
 			{
@@ -129,6 +122,14 @@ public class ProtocolHandler : MonoBehaviour
 			}
 			break;
 		}
+	}
+
+	private float ParseNetworkFloat(string str)
+	{
+		if (decimal_seperator != '.') str = str.Replace('.', decimal_seperator);
+		float number;
+		if (!float.TryParse(str, out number)) throw new UnityException("Error while parsing float");
+		return number;
 	}
 
 	public void OnClientMesssage(Connection con, ProtocolDef pr, string msg)

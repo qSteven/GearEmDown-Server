@@ -8,15 +8,20 @@ using WebSocketSharp.Net;
 public class ServerCMD : MonoBehaviour
 {
 	const string CMDNAME_SERVERPORT = "-port";
+	const string CMDNAME_DECIMAL_SEPERATOR = "-decimal_sep";
+	const char DEFAULT_DECIMAL_SEPERATOR = '.';
 	public static WebSocketServer wssv;
 
 	void Awake()
 	{
-		#if UNITY_EDITOR
-		string fromPort_str = "8080";
-		#else
+		// Port
 		string fromPort_str = GetArg(CMDNAME_SERVERPORT);
-		#endif
+		if (fromPort_str == null || fromPort_str.Length <= 0) fromPort_str = "8080";
+
+		// Decimal seperator
+		string decimal_seperator = GetArg(CMDNAME_DECIMAL_SEPERATOR);
+		if (decimal_seperator == null || decimal_seperator.Length <= 0) ProtocolHandler.decimal_seperator = DEFAULT_DECIMAL_SEPERATOR;
+		else ProtocolHandler.decimal_seperator = decimal_seperator[0];
 
 		int fromPort;
 		if (fromPort_str == null)
